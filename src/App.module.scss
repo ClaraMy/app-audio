@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body {
+    background-color: black;
+    font-family: Kanit;
+}
+
+.songs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 20vw;
+}

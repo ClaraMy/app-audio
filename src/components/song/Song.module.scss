@@ -1,0 +1,19 @@
+.song {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    cursor: pointer;
+    // z-index: -1;
+
+    background-color: white;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+
+    .title {
+        max-width: 10vw;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
