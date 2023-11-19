@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacer-xxs, 8px);
+    color: var(--White, #FFFFFF);
+}

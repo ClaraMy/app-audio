@@ -4,12 +4,14 @@ import Song from "./components/song/Song";
 import s from "./styles/App.module.scss";
 import useCustomStore from "./customStore";
 import Picker from "./components/picker/Picker";
+import Logo from "./components/logo/Logo";
 
 const App = () => {
   const songs = useCustomStore((state) => state.songs);
   return (
     <>
       <div className={s.sidebar}>
+        <Logo />
         <Search />
         <div className={s.songs}>
           {songs.map((song, key) => {
