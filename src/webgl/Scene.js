@@ -15,7 +15,7 @@ import Cover from "./objects/Cover";
 
 class SCENE {
   setup(canvas) {
-    this.width = window.innerWidth;
+    this.width = window.innerWidth/0.75;
     this.height = window.innerHeight;
     this.canvas = canvas;
 
@@ -138,7 +138,7 @@ class SCENE {
 
   onResize() {
     // update size
-    this.width = window.innerWidth;
+    this.width = window.innerWidth/0.75;
     this.height = window.innerHeight;
 
     this.camera.aspect = this.width / this.height;
