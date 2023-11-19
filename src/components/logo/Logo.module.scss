@@ -5,4 +5,8 @@
     align-items: center;
     gap: var(--spacer-xxs, 8px);
     color: var(--White, #FFFFFF);
+
+    h1 {
+        margin: 0;
+    }
 }
