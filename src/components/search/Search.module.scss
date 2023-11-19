@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .searchContainer {
     display: flex;
     align-items: end;
@@ -10,12 +12,12 @@
 
 .input {
     display: flex;
-    padding: 0.5rem 1rem;
     align-items: center;
-    gap: 0.5rem;
-    flex: 1 0 0;
+    padding: 4px 12px;
 
-    border-radius: 6.25rem;
-    border-color: transparent;
-    background-color: #FFF;
+    width: 24vw;
+
+    border-radius: 8px;
+    border: none;
+    background-color: var(--White, #FFFFFF);
 }
