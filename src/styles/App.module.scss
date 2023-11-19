@@ -4,7 +4,7 @@ body {
     display: flex;
     margin: 0;
 
-    background-color: var(--Black, #101010);
+    background-color: var(--black, #000000);
     font-family:  var(--main-font, 'Bagoss', sans-serif);
 
     overflow: hidden;
@@ -63,6 +63,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--spacer-s, 24px);
     justify-content: flex-end;
     width: 70%;
+    overflow: hidden;
 }

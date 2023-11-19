@@ -15,8 +15,8 @@ import Cover from "./objects/Cover";
 
 class SCENE {
   setup(canvas) {
-    this.width = window.innerWidth/0.775;
-    this.height = window.innerHeight;
+    this.width = window.innerWidth * 0.65;
+    this.height = window.innerHeight * 0.9;
     this.canvas = canvas;
 
     this.setupScene();
@@ -73,7 +73,7 @@ class SCENE {
     this.renderer.toneMapping = THREE.NoToneMapping;
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-    this.renderer.setClearColor(0x000000);
+    this.renderer.setClearColor(0x00000);
     this.renderer.setSize(this.width, this.height);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   }
@@ -141,8 +141,8 @@ class SCENE {
 
   // update canvas size
   onResize() {
-    this.width = window.innerWidth/0.775;
-    this.height = window.innerHeight;
+    this.width = window.innerWidth * 0.65;
+    this.height = window.innerHeight * 0.9;
 
     this.camera.aspect = this.width / this.height;
     this.camera.updateProjectionMatrix();
