@@ -1,6 +1,10 @@
 @import url('./_variables.scss');
 
 body {
+    display: flex;
+    padding: var(--spacer-m, 40px);
+    gap: var(--spacer-m, 40px);
+    
     background-color: var(--Black, #101010);
     font-family:  var(--main-font, 'Bagoss', sans-serif);
 }
