@@ -58,8 +58,7 @@ const Search = () => {
     };
 
     return (
-        <div>
-            <div className={s.searchContainer} {...getRootProps()}> 
+        <div className={s.searchContainer} {...getRootProps()}> 
             <input 
                     type="text" 
                     className={s.input}
@@ -67,8 +66,7 @@ const Search = () => {
                     onChange={(e) => setArtist(e.target.value)}
                     onKeyDown={onKeyDown}
                 />
-                {isDragActive && <input {...getInputProps()} />}
-            </div>
+            {isDragActive && <input {...getInputProps()} />}
         </div>
     )
 };

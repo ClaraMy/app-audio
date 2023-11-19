@@ -12,11 +12,16 @@ const App = () => {
     <>
       <div className={s.sidebar}>
         <Logo />
-        <Search />
-        <div className={s.songs}>
-          {songs.map((song, key) => {
-            return <Song key={key} data={song} />
-          })}
+        <div className={s.controls}>
+          <div className={s.search}>
+            <h2>Search for an artist</h2>
+            <Search />
+          </div>
+          <div className={s.songs}>
+            {songs.map((song, key) => {
+              return <Song key={key} data={song} />
+            })}
+          </div>
         </div>
       </div>
       <div className={s.canvas}>
