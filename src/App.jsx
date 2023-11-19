@@ -14,7 +14,7 @@ const App = () => {
         <Logo />
         <div className={s.controls}>
           <div className={s.search}>
-            <h2>Search for an artist</h2>
+            <h2>Search for an artist.</h2>
             <Search />
           </div>
           <div className={s.songs}>

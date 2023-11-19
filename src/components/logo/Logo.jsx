@@ -7,7 +7,7 @@ const Logo = () => {
             className={s.logo}
         >
             <img src={logo} alt="" />
-            <h1>Discover</h1>
+            <h1>Discover.</h1>
         </div>
     )
 }
