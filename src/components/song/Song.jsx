@@ -8,8 +8,6 @@ const Song = ({ data }) => {
         Scene.cover.updateCover(data.album.cover_xl);
     }
 
-    console.log(data);
-
     return (
         <div 
             className={s.song}

@@ -6,13 +6,12 @@ export default class Board {
     constructor() {
         this.group = new Group();
         this.geometry = new THREE.BoxGeometry(1, 1, 1);
-        // to change the colors
 
-        this.whiteMaterial = new THREE.MeshBasicMaterial({
+        // change material
+        this.purpleMaterial = new THREE.MeshBasicMaterial({
             color: 0xD199F9
         })
-
-        this.orangeMaterial = new THREE.MeshBasicMaterial({
+        this.greenMaterial = new THREE.MeshBasicMaterial({
             color: 0xB7FCBF
         })
 
@@ -21,9 +20,9 @@ export default class Board {
                 let mesh; 
 
                 if (x % 2 === y % 2){
-                    mesh = new THREE.Mesh(this.geometry, this.whiteMaterial);
+                    mesh = new THREE.Mesh(this.geometry, this.purpleMaterial);
                 } else {
-                    mesh = new THREE.Mesh(this.geometry, this.orangeMaterial);
+                    mesh = new THREE.Mesh(this.geometry, this.greenMaterial);
                 }
 
                 mesh.position.set(x, y, 0);

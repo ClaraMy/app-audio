@@ -13,6 +13,7 @@ const Search = () => {
         (audio) => {
             console.log("dropped", audio);
             const src = URL.createObjectURL(audio[0]);
+            const artist = audio[0].name;
 
             const audioObject = {
                 title: audio[0].name,
@@ -20,10 +21,11 @@ const Search = () => {
                     cover_small: "",
                 },
                 preview: src,
+                artist,
             };
 
             setSongs([audioObject]);
-            // console.log(audioObject);
+            console.log(audioObject);
         },
         [setSongs]
     );
