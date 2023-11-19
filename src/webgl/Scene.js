@@ -52,6 +52,7 @@ class SCENE {
   // add controls
   setupControls() {
     this.controls = new OrbitControls(this.camera, this.canvas);
+    this.controls.enablePan = false;
   }
 
   // add stats
