@@ -17,8 +17,10 @@ const App = () => {
           })}
         </div>
       </div>
-      <Canvas />
-      <Picker></Picker>
+      <div className={s.canvas}>
+        <Canvas />
+        <Picker></Picker>
+      </div>
       
       
     </>
