@@ -1,14 +1,14 @@
 import * as THREE from "three";
 import { gsap } from "gsap";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import Stats from "three/examples/jsm/libs/stats.module.js";
-import Cube from "./objects/Cube";
-import Line from "./objects/Line";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import Stats from "three/examples/jsm/libs/stats.module.js";
 import pane from "../utils/Pane";
+import Cube from "./objects/Cube";
+import Line from "./objects/Line";
 import LogoIut from "./objects/LogoIut";
 import Board from "./objects/Board";
 import Cover from "./objects/Cover";
@@ -32,21 +32,12 @@ class SCENE {
     this.addEvents();
   }
 
-  setupGLTFLoader(){
-    this.gltfLoader = new GLTFLoader();
-    this.gltfLoader.load("/logo-iut.glb", (gltf) => {
-      console.log(gltf.scene);
-    })
-  }
-
-  setupTextureLoader(){
-    this.textureLoader = new THREE.TextureLoader();
-  }
-
+  // add a scene
   setupScene() {
     this.scene = new THREE.Scene();
   }
 
+  // add a camera
   setupCamera() {
     this.camera = new THREE.PerspectiveCamera(
       28,
@@ -58,15 +49,18 @@ class SCENE {
     this.camera.position.z = 15;
   }
 
+  // add controls
   setupControls() {
     this.controls = new OrbitControls(this.camera, this.canvas);
   }
 
+  // add stats
   setupStats() {
     this.stats = new Stats();
     document.body.appendChild(this.stats.dom);
   }
 
+  // add renderer
   setupRenderer() {
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
@@ -74,7 +68,6 @@ class SCENE {
       powerPreference: "high-performance",
       stencil: false,
       depth: false,
-      // alpha: true
     });
 
     this.renderer.toneMapping = THREE.NoToneMapping;
@@ -85,6 +78,7 @@ class SCENE {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   }
 
+  // add post processing effects
   setupPostProcessing() {
     this.BLOOM_PARAMS = {
       strength: 1,
@@ -130,14 +124,23 @@ class SCENE {
     });
   }
 
+  // add gltf loader
+  setupGLTFLoader(){
+    this.gltfLoader = new GLTFLoader();
+  }
+
+  // add texture loader
+  setupTextureLoader(){
+    this.textureLoader = new THREE.TextureLoader();
+  }
+
   addEvents() {
     gsap.ticker.add(this.tick);
-
     window.addEventListener('resize', () => this.onResize());
   }
 
+  // update canvas size
   onResize() {
-    // update size
     this.width = window.innerWidth/0.775;
     this.height = window.innerHeight;
 
@@ -147,10 +150,9 @@ class SCENE {
     this.renderer.setSize(this.width, this.height);
   }
 
+  // add 3D objects
   addObjects() {
     this.cube = new Cube();
-    // this.scene.add(this.cube.mesh);
-
     this.line = new Line();
     this.logoIut = new LogoIut();
     this.board = new Board();
@@ -161,6 +163,7 @@ class SCENE {
     this.bloomPass.strength = 1;
   }
 
+  // change 3D object
   changeVisualizer(index){
     this.scene.remove(this.selectedObject.group);
     switch (index) {
@@ -198,14 +201,8 @@ class SCENE {
 
   tick = (time, deltaTime, frame) => {
     this.stats.begin();
-
-    // this.cube.tick();
     this.selectedObject.tick(deltaTime);
-
-    // this.scene.add(this.line.group);
-
     this.composer.render();
-    
     this.stats.end();
   };
 }
