@@ -9,14 +9,17 @@ const App = () => {
   const songs = useCustomStore((state) => state.songs);
   return (
     <>
-      <div className={s.songs}>
-        {songs.map((song, key) => {
-          return <Song key={key} data={song} />
-        })}
+      <div className={s.sidebar}>
+        <Search />
+        <div className={s.songs}>
+          {songs.map((song, key) => {
+            return <Song key={key} data={song} />
+          })}
+        </div>
       </div>
       <Canvas />
       <Picker></Picker>
-      <Search />
+      
       
     </>
   );

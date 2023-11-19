@@ -4,9 +4,16 @@ body {
     display: flex;
     padding: var(--spacer-m, 40px);
     gap: var(--spacer-m, 40px);
-    
+
     background-color: var(--Black, #101010);
     font-family:  var(--main-font, 'Bagoss', sans-serif);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacer-m, 40px);
 }
 
 .songs {
