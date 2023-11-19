@@ -9,11 +9,11 @@ export default class Board {
         // to change the colors
 
         this.whiteMaterial = new THREE.MeshBasicMaterial({
-            color: 0xffffff
+            color: 0xD199F9
         })
 
         this.orangeMaterial = new THREE.MeshBasicMaterial({
-            color: 0xf4a259
+            color: 0xB7FCBF
         })
 
         for (let x = 0; x < 16; x++) {
