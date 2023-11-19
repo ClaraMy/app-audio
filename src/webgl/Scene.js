@@ -55,7 +55,7 @@ class SCENE {
       10000
     );
 
-    this.camera.position.z = 100;
+    this.camera.position.z = 15;
   }
 
   setupControls() {
@@ -158,7 +158,7 @@ class SCENE {
     
     this.selectedObject = this.cube;
     this.scene.add(this.selectedObject.group);
-    this.bloomPass.strength = 0.1;
+    this.bloomPass.strength = 1;
   }
 
   changeVisualizer(index){
@@ -166,7 +166,7 @@ class SCENE {
     switch (index) {
       case 0:
         this.selectedObject = this.cube;
-        this.camera.position.z = 20;
+        this.camera.position.z = 15;
         this.bloomPass.strength = 1;
         break;
       case 1:
