@@ -1,7 +1,7 @@
 import Canvas from "./components/canvas/Canvas";
 import Search from "./components/search/Search";
 import Song from "./components/song/Song";
-import s from "./App.module.scss";
+import s from "./styles/App.module.scss";
 import useCustomStore from "./customStore";
 import Picker from "./components/picker/Picker";
 
