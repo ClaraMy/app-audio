@@ -9,7 +9,7 @@ import Logo from "./components/logo/Logo";
 const App = () => {
   const songs = useCustomStore((state) => state.songs);
   return (
-    <>
+    <div className={s.main}>
       <div className={s.sidebar}>
         <Logo />
         <div className={s.controls}>
@@ -30,7 +30,7 @@ const App = () => {
       </div>
       
       
-    </>
+    </div>
   );
 }
 

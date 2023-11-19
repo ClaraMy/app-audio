@@ -15,7 +15,7 @@ import Cover from "./objects/Cover";
 
 class SCENE {
   setup(canvas) {
-    this.width = window.innerWidth/0.75;
+    this.width = window.innerWidth/0.775;
     this.height = window.innerHeight;
     this.canvas = canvas;
 
@@ -138,7 +138,7 @@ class SCENE {
 
   onResize() {
     // update size
-    this.width = window.innerWidth/0.75;
+    this.width = window.innerWidth/0.775;
     this.height = window.innerHeight;
 
     this.camera.aspect = this.width / this.height;
@@ -176,12 +176,12 @@ class SCENE {
         break;
       case 2:
         this.selectedObject = this.logoIut;
-        this.camera.position.z = 10;
+        this.camera.position.z = 20;
         this.bloomPass.strength = 1;
         break;
       case 3:
         this.selectedObject = this.board;
-        this.camera.position.z = 50;
+        this.camera.position.z = 60;
         this.bloomPass.strength = 0.1;
         break;
       case 4:

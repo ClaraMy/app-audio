@@ -3,16 +3,19 @@
 body {
     display: flex;
     margin: 0;
-    padding: var(--spacer-m, 40px);
-    gap: var(--spacer-m, 40px);
-
-    width: 100vw;
-    height: 100vh;
 
     background-color: var(--Black, #101010);
     font-family:  var(--main-font, 'Bagoss', sans-serif);
 
     overflow: hidden;
+}
+
+.main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: var(--spacer-m, 40px);
+    gap: var(--spacer-m, 40px);
 }
 
 .sidebar {
@@ -28,21 +31,23 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--spacer-s, 24px);
-    }
-
-    .search {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--spacer-xxs, 8px);
         width: 100%;
+
+        .search {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--spacer-xxs, 8px);
+            width: 100%;
+        }
+    
+        h2 {
+            margin: 0;
+            color: var(--White, #FFFFFF);
+            font-size: 1.25rem;
+        }
     }
 
-    h2 {
-        margin: 0;
-        color: var(--White, #FFFFFF);
-        font-size: 1.25rem;
-    }
 }
 
 .songs {
@@ -58,6 +63,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    align-self: stretch;
+    justify-content: flex-end;
+    width: 70%;
 }
