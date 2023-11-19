@@ -156,7 +156,7 @@ class SCENE {
     this.board = new Board();
     this.cover = new Cover();
     
-    this.selectedObject = this.cover;
+    this.selectedObject = this.cube;
     this.scene.add(this.selectedObject.group);
     this.bloomPass.strength = 0.1;
   }
