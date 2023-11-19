@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('./_variables.scss');
 
 body {
-    background-color: black;
-    font-family: Kanit;
+    background-color: var(--Black, #101010);
+    font-family:  var(--main-font, 'Bagoss', sans-serif);
 }
 
 .songs {

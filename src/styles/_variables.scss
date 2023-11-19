@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Bagoss';
+    src: url('../fonts/BagossStandardTRIAL-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+// fonts
+$main-font: 'Bagoss', sans-serif;
+$secondary-font: 'Inter', sans-serif;
+
 // spacer
 $spacer-xxs: 8px;
 $spacer-xs: 16px;
