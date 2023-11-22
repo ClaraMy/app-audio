@@ -53,7 +53,7 @@ const Search = () => {
 
         response = await response.json();
 
-        const data = response.data.slice(0,9);
+        const data = response.data.slice(0,24);
         AudioController.ctx.resume();
         setSongs(data);
         setArtist("");
