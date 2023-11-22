@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .picker {
     display: flex;
     gap: var(--spacer-s, 24px);
@@ -7,7 +9,7 @@
         transition: all 0.5s;
         cursor: pointer;
 
-        color: white;
+        color: var(--white, #FFFFFF);
 
         &:hover {
             opacity: 1;

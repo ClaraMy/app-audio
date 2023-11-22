@@ -3,12 +3,10 @@
 .song {
     display: flex;
     flex-direction: column;
-    // align-self: stretch;
     gap: 12px;
     width: 28%;
 
     cursor: pointer;
-    // z-index: -1;
 
     border-radius: 0.25rem;
     color: var(--White, #FFFFFF);
