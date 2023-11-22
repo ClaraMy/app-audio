@@ -3,7 +3,6 @@ import gsap from "gsap";
 class AUDIO_CONTROLLER {
     setup(){
         // dans le cas où t'as pas d'audio
-        // ctx = context
         this.ctx = new (window.AudioContext || window.webkitAudioContext)();
 
         this.audio = new Audio();
