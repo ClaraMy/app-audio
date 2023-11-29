@@ -8,6 +8,7 @@ import Logo from "./components/logo/Logo";
 
 const App = () => {
   const songs = useCustomStore((state) => state.songs);
+  console.log(songs);
   return (
     <div className={s.main}>
       <div className={s.sidebar}>
@@ -17,6 +18,11 @@ const App = () => {
             <h2>Search for an artist.</h2>
             <Search />
           </div>
+          {songs.length === 0 && (
+            <div className={s.noresult}>
+              <p>No songs or artist found. Please try searching for another song or artist.</p>
+            </div>
+          )}
           <div className={s.songs}>
             {songs.map((song, key) => {
               return <Song key={key} data={song} />
