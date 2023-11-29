@@ -8,6 +8,7 @@ You will soon go to a concert or a music festival but you do not know all the mu
 Discover is a website to discover the discography of an artist by listening to a part of a song. 
 It also allows you to interact with 3D objects that move to the rhythm of the song! (yes, it has no use but it’s stylish, isn’t it? 👀)
 
+
 ## Credits
 **Development**: Karl Justiniano & Clara Many
 
@@ -16,6 +17,7 @@ It also allows you to interact with 3D objects that move to the rhythm of the so
 **Illustration**: Bruno (branding agency)
 
 **API**: Deezer
+
 
 ## Available Scripts
 
