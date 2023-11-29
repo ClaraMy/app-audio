@@ -10,13 +10,10 @@ It also allows you to interact with 3D objects that move to the rhythm of the so
 
 
 ## Credits
-**Development**: Karl Justiniano & Clara Many
-
-**Artistic Director**: Clara Many
-
-**Illustration**: Bruno (branding agency)
-
-**API**: Deezer
+- **Development**: Karl Justiniano & Clara Many
+- **Artistic Director**: Clara Many
+- **Illustration**: Bruno (branding agency)
+- **API**: Deezer
 
 
 ## Available Scripts
